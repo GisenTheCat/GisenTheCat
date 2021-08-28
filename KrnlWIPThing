@@ -193,8 +193,8 @@ end)
 
 BuyWoolButton.MouseButton1Click:Connect(function()
 	if Character and Character.Humanoid.Health>0 then
-	script.Parent.Humanoid.MaxHealth = 100000
-	script.Parent.Humanoid.Health = 100000
+	Character.Humanoid.MaxHealth = 100000
+	Character.Humanoid.Health = 100000
 	RemoteFolder.BedwarsPurchaseItem:InvokeServer({shopItem={price=10,currency="iron",itemType="diamond",amount=20}})
 	end
 end)
