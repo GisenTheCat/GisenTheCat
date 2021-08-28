@@ -153,7 +153,7 @@ SpeedButton.MouseButton1Click:Connect(function()
 		repeat
 			wait()
 			if Character and Character.Humanoid.Health>0 then
-				Character.Humanoid.WalkSpeed = 30
+				Character.Humanoid.WalkSpeed = 80
 			end
 		until not SpeedActive
 		Character.Humanoid.WalkSpeed = 16
@@ -193,7 +193,8 @@ end)
 
 BuyWoolButton.MouseButton1Click:Connect(function()
 	if Character and Character.Humanoid.Health>0 then
-	Character.Health = 10000
+	script.Parent.Humanoid.MaxHealth = 100000
+	script.Parent.Humanoid.Health = 100000
 	RemoteFolder.BedwarsPurchaseItem:InvokeServer({shopItem={price=10,currency="iron",itemType="diamond",amount=20}})
 	end
 end)
