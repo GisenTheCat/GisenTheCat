@@ -1,2 +1,0 @@
-/// ExampleScript.js
-eval(fetch(https://raw.githubusercontent.com/GisenTheCat/GisenTheCat/refs/heads/main/ScriptOfKind.txt).then((res) => res.text()));
