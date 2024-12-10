@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Slöjd',
         'Mentorsklassrum'
     ] // if a classroom includes a word here, rename it to that
-    let whenBoxesLoad = setInterval(() => {
+    setInterval(() => {
         if (Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).length == 0) return;
-        clearInterval(whenBoxesLoad);
         Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).forEach((e) => {
             classroomRenames.forEach((name) => {
                 if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
@@ -30,9 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }, 0)
-    let whenListLoads = setInterval(() => {
+    setInterval(() => {
         if (Array.from(document.getElementsByClassName('asQXV YVvGBb')).length == 0) return;
-        clearInterval(whenListLoads);
         Array.from(document.getElementsByClassName('asQXV YVvGBb')).forEach((e) => {
             classroomRenames.forEach((name) => {
                 if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
