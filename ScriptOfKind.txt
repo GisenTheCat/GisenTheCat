@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}, 0)
 		if (document.location.pathname.substring(1, 2) == 'h') {
 			setInterval(() => {
-				if (document.querySelector('.YVvGBb.z3vRcc-ZoZQ1')) return;
+				if (!document.querySelector('.YVvGBb.z3vRcc-ZoZQ1')) return;
 				document.querySelectorAll('.YVvGBb.z3vRcc-ZoZQ1').forEach((e) => {
 					classroomRenames.forEach((name) => {
 						if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
