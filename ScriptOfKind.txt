@@ -1,7 +1,7 @@
 /// GisenScript.js
-if (window.loadedCustomScript != undefined) throw null;
-console.log(window.loadedCustomScript);
-window.loadedCustomScript = 'hi';
+if (document.querySelector('gisenscript') != null) throw null;
+document.body.appendChild(document.createElement("gisenscript"));
+
 if (document.location.href != 'https://classroom.google.com/h') throw null;
 const classroomRenames = [
     'Español',
