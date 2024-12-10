@@ -1,10 +1,10 @@
 /// GisenScript.js
-console.log('hi, i loaded')
 document.addEventListener('DOMContentLoaded', function() {
-	if (document.querySelector('gisenscript') != null) throw null;
+	if (document.querySelector('gisenscript')) throw null;
 	document.body.appendChild(document.createElement("gisenscript"));
+    console.log(document.location.hostname)
 	if (document.location.hostname == 'classroom.google.com') {
-		const classroomRenames = ['Español', 'Teknik', 'NO', 'Hkk', 'SO', 'Output', 'Musik', 'Bild', 'Idh', 'English', 'Ma', 'Svenska', 'Slöjd', 'Mentorsklassrum'] // if a classroom includes a word here, rename it to that
+		const classroomRenames = ['Español', 'Teknik', 'NO', 'Hkk', 'SO', 'Output', 'Musik', 'Bild', 'Idh', 'English', 'Ma', 'Svenska', 'Slöjd', 'Mentorsklassrum']; // if a classroom includes a word here, rename it to that
 		setInterval(() => {
 			if (document.querySelectorAll('.asQXV.YVvGBb').length == 0) return;
 			document.querySelectorAll('.asQXV.YVvGBb').forEach((e) => {
