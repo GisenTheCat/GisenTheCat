@@ -1,5 +1,6 @@
+
 /// ExampleScript.js
-if (document.location.href != 'https://classroom.google.com/h') return;
+if (document.location.href != 'https://classroom.google.com/h') throw null;
 const classroomRenames = [
     'Español',
     'Teknik',
