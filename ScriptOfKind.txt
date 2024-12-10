@@ -1,3 +1,4 @@
+/// GisenScript.js
 if (document.loadedCustomScript == true) throw null; else document.loadedCustomScript = true;
 console.log('script loaded!')
 if (document.location.href != 'https://classroom.google.com/h') throw null;
