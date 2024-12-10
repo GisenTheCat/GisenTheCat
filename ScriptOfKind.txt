@@ -2,12 +2,12 @@
 document.addEventListener('DOMContentLoaded', function() {
 	if (document.querySelector('gisenscript')) throw null;
 	document.body.appendChild(document.createElement("gisenscript"));
-    console.log(document.location.hostname)
+	console.log(document.location.hostname)
 	if (document.location.hostname == 'classroom.google.com') {
 		const classroomRenames = ['Español', 'Teknik', 'NO', 'Hkk', 'SO', 'Output', 'Musik', 'Bild', 'Idh', 'English', 'Ma', 'Svenska', 'Slöjd', 'Mentorsklassrum']; // if a classroom includes a word here, rename it to that
 		setInterval(() => {
-			if (document.querySelectorAll('.asQXV.YVvGBb').length == 0) return;
-			document.querySelectorAll('.asQXV.YVvGBb').forEach((e) => {
+			if (document.querySelectorAll('.kXvNXe .asQXV.YVvGBb').length == 0) return;
+			document.querySelectorAll('.kXvNXe .asQXV.YVvGBb').forEach((e) => {
 				classroomRenames.forEach((name) => {
 					if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
 						e.innerText = name;
@@ -26,25 +26,26 @@ document.addEventListener('DOMContentLoaded', function() {
 					});
 				});
 			}, 0)
-		}
-	} else if (document.location.pathname.substring(1, 2) == 'c') {
-		setInterval(() => {
-			if (document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb')) {
-				classroomRenames.forEach((name) => {
-					if (document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb').innerText.toLowerCase().includes(name.toLowerCase())) {
-						document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb').innerText = name;
-					}
-				});
-			}
-			if (document.querySelector('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb')) {
-				document.querySelectorAll('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb').forEach((e) => {
+		} else if (document.location.pathname.substring(1, 2) == 'c') {
+			setInterval(() => {
+				if (document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb')) {
 					classroomRenames.forEach((name) => {
-						if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
-							e.innerText = name;
+						if (document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb').innerText.toLowerCase().includes(name.toLowerCase())) {
+							document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb').innerText = name;
 						}
 					});
-				});
-			}
-		}, 0);
+				}
+				console.log(document.querySelector('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb'))
+				if (document.querySelector('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb')) {
+					document.querySelectorAll('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb').forEach((e) => {
+						classroomRenames.forEach((name) => {
+							if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
+								e.innerText = name;
+							}
+						});
+					});
+				}
+			}, 0);
+		}
 	}
 });
