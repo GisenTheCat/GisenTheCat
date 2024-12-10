@@ -1,5 +1,6 @@
 
 /// ExampleScript.js
+if (document.loadedCustomScript == true) throw null; else document.loadedCustomScript = true;
 if (document.location.href != 'https://classroom.google.com/h') throw null;
 const classroomRenames = [
     'Español',
