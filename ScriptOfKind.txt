@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('gisenscript') != null) throw null;
     document.body.appendChild(document.createElement("gisenscript"));
-
     if (document.location.href != 'https://classroom.google.com/h') throw null;
     const classroomRenames = [
         'Español',
