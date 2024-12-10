@@ -1,4 +1,3 @@
-
 /// ExampleScript.js
 if (document.loadedCustomScript == true) throw null; else document.loadedCustomScript = true;
 console.log('script loaded!')
@@ -19,10 +18,21 @@ const classroomRenames = [
     'Slöjd',
     'Mentorsklassrum'
 ] // if a classroom includes a word here, rename it to that
-let whenClassroomsLoad = setInterval(() => {
+let whenBoxesLoad = setInterval(() => {
     if (Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).length == 0) return;
-    clearInterval(whenClassroomsLoad);
+    clearInterval(whenBoxesLoad);
     Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).forEach((e) => {
+        classroomRenames.forEach((name) => {
+            if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
+                e.innerText = name;
+            }
+        });
+    });
+}, 0)
+let whenListLoads = setInterval(() => {
+    if (Array.from(document.getElementsByClassName('asQXV YVvGBb')).length == 0) return;
+    clearInterval(whenListLoads);
+    Array.from(document.getElementsByClassName('asQXV YVvGBb')).forEach((e) => {
         classroomRenames.forEach((name) => {
             if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
                 e.innerText = name;
