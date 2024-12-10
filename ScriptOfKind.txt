@@ -1,4 +1,5 @@
 /// GisenScript.js
+console.log('hi, i loaded')
 document.addEventListener('DOMContentLoaded', function() {
 	if (document.querySelector('gisenscript') != null) throw null;
 	document.body.appendChild(document.createElement("gisenscript"));
