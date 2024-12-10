@@ -1,43 +1,45 @@
 /// GisenScript.js
-if (document.querySelector('gisenscript') != null) throw null;
-document.body.appendChild(document.createElement("gisenscript"));
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('gisenscript') != null) throw null;
+    document.body.appendChild(document.createElement("gisenscript"));
 
-if (document.location.href != 'https://classroom.google.com/h') throw null;
-const classroomRenames = [
-    'Español',
-    'Teknik',
-    'NO',
-    'Hkk',
-    'SO',
-    'Output',
-    'Musik',
-    'Bild',
-    'Idh',
-    'English',
-    'Ma',
-    'Svenska',
-    'Slöjd',
-    'Mentorsklassrum'
-] // if a classroom includes a word here, rename it to that
-let whenBoxesLoad = setInterval(() => {
-    if (Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).length == 0) return;
-    clearInterval(whenBoxesLoad);
-    Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).forEach((e) => {
-        classroomRenames.forEach((name) => {
-            if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
-                e.innerText = name;
-            }
+    if (document.location.href != 'https://classroom.google.com/h') throw null;
+    const classroomRenames = [
+        'Español',
+        'Teknik',
+        'NO',
+        'Hkk',
+        'SO',
+        'Output',
+        'Musik',
+        'Bild',
+        'Idh',
+        'English',
+        'Ma',
+        'Svenska',
+        'Slöjd',
+        'Mentorsklassrum'
+    ] // if a classroom includes a word here, rename it to that
+    let whenBoxesLoad = setInterval(() => {
+        if (Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).length == 0) return;
+        clearInterval(whenBoxesLoad);
+        Array.from(document.getElementsByClassName('YVvGBb z3vRcc-ZoZQ1')).forEach((e) => {
+            classroomRenames.forEach((name) => {
+                if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
+                    e.innerText = name;
+                }
+            });
         });
-    });
-}, 0)
-let whenListLoads = setInterval(() => {
-    if (Array.from(document.getElementsByClassName('asQXV YVvGBb')).length == 0) return;
-    clearInterval(whenListLoads);
-    Array.from(document.getElementsByClassName('asQXV YVvGBb')).forEach((e) => {
-        classroomRenames.forEach((name) => {
-            if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
-                e.innerText = name;
-            }
+    }, 0)
+    let whenListLoads = setInterval(() => {
+        if (Array.from(document.getElementsByClassName('asQXV YVvGBb')).length == 0) return;
+        clearInterval(whenListLoads);
+        Array.from(document.getElementsByClassName('asQXV YVvGBb')).forEach((e) => {
+            classroomRenames.forEach((name) => {
+                if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
+                    e.innerText = name;
+                }
+            });
         });
-    });
-}, 0)
+    }, 0)
+});
