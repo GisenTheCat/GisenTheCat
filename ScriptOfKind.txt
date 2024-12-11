@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('gisenscript')) throw null;
     document.body.appendChild(document.createElement("gisenscript"));
     console.log(document.location.hostname)
+    if (document.location.hostname == 'www.youtube.com') fetch('https://github.com/Anarios/return-youtube-dislike/raw/refs/heads/main/Extensions/UserScript/Return%20Youtube%20Dislike.user.js').then(res => res.text()).then(e => {eval(e)});
     if (document.location.hostname == 'classroom.google.com') {
         const classroomRenames = Object.assign({
             'Hkk': 'Hemkunskap',
