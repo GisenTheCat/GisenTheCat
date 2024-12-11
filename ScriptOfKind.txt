@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'Ma': 'Matematik'
         }, [null].concat([
           'Español',
+          'Français',
+          'Deutsch',
           'Teknik',
           'NO',
           'SO',
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     Object.keys(classroomRenames).forEach((name) => {
                         if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
                             e.innerText = classroomRenames[name];
+                            e.parentNode.parentNode.querySelector('.yXVLvd > .CNpREd > .OqAhgb.TGnLfc.A6dC2c.bFjUmb-Tvm9db').innerText = classroomRenames[name].substring(0, 1).toUpperCase();
                         }
                     });
                 });
