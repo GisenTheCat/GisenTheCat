@@ -66,14 +66,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 });
             }
-            if (!document.querySelector('.YVvGBb.z3vRcc-ZoZQ1')) return;
-            document.querySelectorAll('.YVvGBb.z3vRcc-ZoZQ1').forEach((e) => {
+            if (document.querySelector('.VfPpkd-rymPhb-fpDzbe-fmcmS')) {
+                document.querySelectorAll('.VfPpkd-rymPhb-fpDzbe-fmcmS').forEach((e) => {
                 Object.keys(classroomRenames).forEach((name) => {
                     if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
                         e.innerText = classroomRenames[name];
                     }
                 });
             });
+            }
+            if (document.querySelector('.YVvGBb.z3vRcc-ZoZQ1')) {
+            document.querySelectorAll('.YVvGBb.z3vRcc-ZoZQ1').forEach((e) => {
+                Object.keys(classroomRenames).forEach((name) => {
+                    if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
+                        e.innerText = classroomRenames[name];
+                    }
+                });
+            });}
         }, 0)
     }
 });
