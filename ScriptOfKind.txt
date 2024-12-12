@@ -48,6 +48,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }
+            if (document.querySelector('.y9bEQb > .dDKhVc.YVvGBb')) {
+                document.querySelectorAll('.y9bEQb > .dDKhVc.YVvGBb').forEach((e) => {
+                    Object.keys(classroomRenames).forEach((name) => {
+                        if (e.innerText.toLowerCase().includes(name.toLowerCase())) {
+                            e.innerText = classroomRenames[name];
+                        }
+                    });
+                });
+            }
             if (document.querySelector('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb')) {
                 document.querySelectorAll('.tNGpbb.YrFhrf-ZoZQ1.YVvGBb').forEach((e) => {
                     Object.keys(classroomRenames).forEach((name) => {
