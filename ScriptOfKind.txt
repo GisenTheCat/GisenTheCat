@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Object.keys(classroomRenames).forEach((name) => {
                     if (document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb').innerText.toLowerCase().includes(name.toLowerCase())) {
                         document.querySelector('.YVvGBb.z3vRcc-J3yWx.Pce5Kb').innerText = classroomRenames[name];
+                        document.title = classroomRenames[name];
                     }
                 });
             }
