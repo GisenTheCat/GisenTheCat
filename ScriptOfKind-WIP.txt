@@ -1,5 +1,4 @@
 /// GisenScript.js
-document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('gisenscript')) throw null;
     document.body.appendChild(document.createElement("gisenscript"));
     console.log(document.location.hostname)
@@ -85,4 +84,3 @@ document.addEventListener('DOMContentLoaded', function() {
             });}
         }, 0)
     }
-});
