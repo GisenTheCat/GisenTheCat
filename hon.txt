@@ -1,4 +1,6 @@
-const elements = document.getElementsByClassName('hon-ue-content');
-if (elements.length > 0) {
-  elements[elements.length - 1].children[0].innerText = 'test worked :3';
-}
+(function() {
+  const elements = document.getElementsByClassName('hon-ue-content');
+  if (elements.length > 0) {
+    elements[elements.length - 1].children[0].innerText = 'test worked :3';
+  }
+})()
