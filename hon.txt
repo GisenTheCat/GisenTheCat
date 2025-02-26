@@ -1,6 +1,10 @@
 (function() {
-  const elements = document.getElementsByClassName('hon-ue-content');
+  var r = document.querySelector(':root');
+  r.style.setProperty('--hon-black', 'white');
+  r.style.setProperty('--hon-secondary-color', 'black');
+  r.style.setProperty('--bs-body-color', 'white');
+  /*const elements = document.getElementsByClassName('hon-ue-content');
   if (elements.length > 0) {
     elements[elements.length - 1].children[0].innerText = 'test worked :3';
-  }
+  }*/
 })()
